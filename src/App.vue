@@ -29,8 +29,9 @@ export default {
   </div>
 </header>
 <p>{{search}}</p>
-<MovieCard 
-:movieInfo="cardData"/>
+<div class="card-section">
+  <MovieCard :movieInfo="cardData"/>
+</div>
 </template>
 
 <style>
@@ -41,6 +42,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: flex;
+  flex-flow: column nowrap;
+  
 }
 header {
   display: flex;
@@ -57,5 +61,10 @@ header div {
 }
 button {
   height: inherit;
+}
+.card-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 </style>

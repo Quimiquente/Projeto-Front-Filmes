@@ -31,7 +31,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="card">
     <div>
       <img :src="posterImg" alt="Eitcha">
       <button :class="{ favorited: this.isFavorite, notFavorited: !this.isFavorite }" @click="toggleFavorite">favoritar</button>
@@ -49,11 +49,10 @@
 
 <style>
 .card {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  border: 2px black solid;
+  width: 200px
+}
+.card div {
+  border: 2px black solid;
 }
 </style>
