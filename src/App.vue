@@ -1,6 +1,6 @@
 <script>
 import MovieCard from "./components/MovieCard.vue"
-import movieInfo from "./assets/cardData.json"
+import movieInfo from "./assets/cardData.js"
 
 export default {
   components: {
@@ -12,6 +12,9 @@ export default {
       search: '',
       cardData: movieInfo
     }
+  },
+  mounted() {
+    console.log(this.cardData.releaseDate)
   }
 }
 </script>
@@ -26,7 +29,8 @@ export default {
   </div>
 </header>
 <p>{{search}}</p>
-<MovieCard />
+<MovieCard 
+:movieInfo="cardData"/>
 </template>
 
 <style>
