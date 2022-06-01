@@ -1,15 +1,24 @@
 <script>
+import MovieCard from "./components/MovieCard.vue"
+import movieInfo from "./assets/cardData.json"
+
+export default {
+  components: {
+    MovieCard
+  },
+
   data() {
     return {
-      search: "";
+      search: '',
+      cardData: movieInfo
     }
   }
+}
 </script>
 
 <template>
 <header>
   <p>loco de doido</p>
-  puta merda
   <input v-model="search" type="text">
   <div>
     <button>favoritos</button>
@@ -17,7 +26,7 @@
   </div>
 </header>
 <p>{{search}}</p>
-<HelloWorld/>
+<MovieCard />
 </template>
 
 <style>
